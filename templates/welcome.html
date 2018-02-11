@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}
+<!--update head with content without replacing anything already in the base.html-->
+<!--order matters-->
+{{ super() }}
+    <script type="text/javascript"> var x = 1;</script>
+{% endblock %}
+
+{% block title %} Welcome {% endblock %}
+
+{% block content %}
+    <p> Welcome {{ username }} - <a href='{{ url_for("logout") }}'>Logout</a></p>
+{% endblock %}
